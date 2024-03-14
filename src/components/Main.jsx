@@ -46,7 +46,7 @@ Main.defaultProps = {
 };
 
 Main.propTypes = {
-    tickets: PropTypes.instanceOf(Array).isRequired,
+    requestTickets: PropTypes.instanceOf(Array).isRequired,
     id: PropTypes.string,
     getAllTickets: PropTypes.func.isRequired,
 };

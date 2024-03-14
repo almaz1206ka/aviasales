@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import './filter.css';
 
 export const Filter = ({ ...props }) => {
@@ -42,4 +43,17 @@ export const Filter = ({ ...props }) => {
             </label>
         </div>
     );
+};
+
+Filter.PropTypes = {
+    allTickets: PropTypes.bool.isRequired,
+    noTransfer: PropTypes.bool.isRequired,
+    oneTransfer: PropTypes.bool.isRequired,
+    twoTransfer: PropTypes.bool.isRequired,
+    threeTransfer: PropTypes.bool.isRequired,
+    setAllTickets: PropTypes.func.isRequired,
+    noTransferTickets: PropTypes.func.isRequired,
+    oneTransferTickets: PropTypes.func.isRequired,
+    twoTransferTickets: PropTypes.func.isRequired,
+    threeTransferTickets: PropTypes.func.isRequired,
 };

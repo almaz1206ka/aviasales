@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { PropTypes } from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 import './tickets.css';
@@ -55,4 +56,17 @@ export const Tickets = ({ ...props }) => {
             )}
         </div>
     );
+};
+
+Tickets.propTypes = {
+    tickets: PropTypes.array.isRequired,
+    allTickets: PropTypes.bool.isRequired,
+    noTransfer: PropTypes.bool.isRequired,
+    oneTransfer: PropTypes.bool.isRequired,
+    twoTransfer: PropTypes.bool.isRequired,
+    threeTransfer: PropTypes.bool.isRequired,
+    cleanTickets: PropTypes.func.isRequired,
+    cheapTickets: PropTypes.func.isRequired,
+    fastTickets: PropTypes.func.isRequired,
+    optimalTickets: PropTypes.func.isRequired,
 };

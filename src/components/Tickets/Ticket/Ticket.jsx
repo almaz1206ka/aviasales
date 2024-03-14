@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import '../tickets.css';
 
 export const Ticket = ({ tickets }) => {
@@ -88,4 +89,8 @@ export const Ticket = ({ tickets }) => {
             </div>
         </li>
     );
+};
+
+Ticket.propTypes = {
+    tickets: PropTypes.array.isRequired,
 };
